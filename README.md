@@ -59,3 +59,6 @@ This case study simulates a backend for a real-time voting platform. Users can c
 ### 4. 📄 API Documentation
 - Swagger docs generated with `drf-yasg`
 - Access via `/api/docs` route
+
+### 5. 📄 Project demo link
+- [project demo](https://alx-project-nexus-production-acc9.up.railway.app/api/docs/)
