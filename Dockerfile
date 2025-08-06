@@ -26,4 +26,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run migrations then start Daphne server (ASGI)
-CMD ["sh", "-c", "python manage.py migrate && daphne -b 0.0.0.0 -p 8000 server.asgi:application"]
+CMD ["sh", "-c", "daphne -b 0.0.0.0 -p 8000 server.asgi:application"]
