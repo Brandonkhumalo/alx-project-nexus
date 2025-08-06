@@ -1,0 +1,4 @@
+.BallotBlaze_Server.env
+__pycache__/
+*.pyc
+db.sqlite3
