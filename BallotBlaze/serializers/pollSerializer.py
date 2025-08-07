@@ -48,5 +48,3 @@ class VoteSerializer(serializers.Serializer):
         option.vote_count += 1
         option.save()
         return vote
-    
-    # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA3Yzg0Y2JhLTA3ZjItNDI2Ni04NTg2LWE2MDVlZjU4NzU4MCIsImV4cCI6MTc1NzE2MDA3MSwidHlwZSI6ImFjY2Vzc190b2tlbiJ9.6U-GqibWsJ7RvZ4mu79mTQ0F3lw3l4nv-SkQ0207DxI

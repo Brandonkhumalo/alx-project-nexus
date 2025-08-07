@@ -10,18 +10,19 @@ from rest_framework.filters import SearchFilter
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 
+#Create polls
 class PollListCreateView(generics.ListCreateAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
-
+#get all polls
 class PollRetrieveView(generics.RetrieveAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
 
-
+#vote
 class VoteView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
@@ -53,7 +54,7 @@ class VoteView(APIView):
 
         return Response({'detail': 'Vote cast successfully.'}, status=status.HTTP_201_CREATED)
 
-
+#get the results of a poll using id
 class PollResultsView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
@@ -70,6 +71,7 @@ class PollResultsView(APIView):
             'results': serializer.data
         })
 
+#get polls ordered by the latest creation
 class PollCursorPagination(CursorPagination):
     page_size = 10
     ordering = '-created_at'  # newest polls first
@@ -79,6 +81,7 @@ class PaginatedPollListView(generics.ListAPIView):
     serializer_class = PollSerializer
     pagination_class = PollCursorPagination
 
+#search for a poll
 class PollSearchView(generics.ListAPIView):
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
