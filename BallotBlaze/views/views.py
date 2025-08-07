@@ -80,7 +80,7 @@ class PaginatedPollListView(generics.ListAPIView):
     pagination_class = PollCursorPagination
 
 class PollSearchView(generics.ListAPIView):
-    queryset = Poll.objects.all()
+    queryset = Poll.objects.all().order_by('-created_at')
     serializer_class = PollSerializer
     filter_backends = [SearchFilter]
     search_fields = ['title']  # search by title
