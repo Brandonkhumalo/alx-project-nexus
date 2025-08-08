@@ -12,7 +12,6 @@ This program focused on practical backend development skills using industry-stan
 - **Python** – Core language for backend logic
 - **Django** – Robust framework for rapid API development
 - **REST APIs** – For client-server communication
-- **GraphQL** – Alternative data querying (explored in related projects)
 - **Docker** – For containerization and environment consistency
 - **CI/CD** – Automated build, test, and deployment pipelines
 
